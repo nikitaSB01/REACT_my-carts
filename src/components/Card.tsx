@@ -1,7 +1,7 @@
 import React from "react";
 
 interface CardProps {
-  tittle: string;
+  title: string;
   text: string;
   buttonText: string;
   imageUrl?: string;
@@ -10,7 +10,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({
-  tittle,
+  title,
   text,
   buttonText,
   imageUrl,
@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({
         <img src={imageUrl} className="card-img-top" alt="Card cap" />
       )}
       <div className="card-body">
-        <h5 className="card-title">{tittle}</h5>
+        <h5 className="card-title">{title}</h5>
         <p className="card-text">{text}</p>
         {children}
         <button className="btn btn-primary" onClick={onButtonClick}>
